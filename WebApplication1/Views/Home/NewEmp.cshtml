@@ -1,0 +1,30 @@
+﻿@using WebApplication1.models.DB;
+@model Emp
+@{
+    ViewData["Title"] = "NewEmp";
+}
+
+<h2>NewEmp</h2>
+<div>
+
+    <form asp-action="newEmp" asp-controllers="Home" method="post">
+        <span>Code</span>
+        <input asp-for="Code" required />
+        <br />
+        <span>name</span>
+        <input asp-for="Name" required placeholder="Enter Name" />
+        <br />
+        <span>salary</span>
+        <input asp-for="Salary" required />
+        <br />
+        <span>DeptId</span>
+        <input asp-for="Deptid" required />
+        <br />
+        <input type="submit"value="Add Emp" class="btn btn-primary" />
+        </form>
+        
+
+
+
+
+</div>

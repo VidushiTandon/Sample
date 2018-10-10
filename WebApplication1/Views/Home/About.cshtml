@@ -1,0 +1,27 @@
+﻿@model List<EmpDeptt>
+
+@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+<div>
+    <a asp-action="NewEmp" asp-controller="Home">Add New Record</a>
+
+
+<table class="table table-bordered">
+    @foreach (var e in Model)
+    {
+
+    <tr>
+
+        <td>@e.Code</td>
+        <td>@e.DeptId</td>
+        <td>@e.DepttName</td>
+        <td>@e.Salary</td>
+        <td>@e.EmpName</td>
+    </tr>
+        }
+    </table>

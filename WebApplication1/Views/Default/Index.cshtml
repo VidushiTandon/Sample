@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+@{ 
+    var list = (SelectList)ViewData["list"];
+}
+<form asp-action="GetCode" asp-controller="Default" method="post">
+<select asp-items="@list" name="EmpCode">
+    <option value="" disabled selected>--Select a Name--</option>
+</select>
+<br />
+<input type="submit"value="Submit" />
+</form>
